@@ -10,9 +10,15 @@ def _():
     return (mo,)
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""### Install DuckLake""")
+    mo.md(
+        """
+    ## Install ducklake
+
+    https://ducklake.select/docs/stable/duckdb/introduction
+    """
+    )
     return
 
 
@@ -26,15 +32,28 @@ def install_ducklake(mo):
     return
 
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(f"""## Create a ducklake database or attach if exist""")
+    return
+
+
 @app.cell
 def creating_ducklake_database(mo):
     _df = mo.sql(
         f"""
-        ATTACH 'ducklake:rb_ducklake.ducklake' AS rb_ducklake;
+        -- "ducklake:ducklake/" indicate the path for the ducklake DB and parquet files
+        ATTACH 'ducklake:ducklake/rb_ducklake.ducklake' AS rb_ducklake; -- (DATA_PATH 'ducklake/');
         USE rb_ducklake;
         """
     )
     return (rb_ducklake,)
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(f"""## Create tables and test ducklake feature in the rb_ducklake duckdb database""")
+    return
 
 
 @app.cell
@@ -49,20 +68,28 @@ def _(mo):
 
 
 @app.cell
-def _(mo):
+def _():
+    # variable with the ducklake duckdb database for use
+    db = "ducklake/rb_ducklake"
+    db
+    return (db,)
+
+
+@app.cell
+def _(db, mo):
     _df = mo.sql(
         f"""
-        FROM glob('rb_ducklake.ducklake.files/*');
+        FROM glob('{db}.ducklake.files/*');
         """
     )
     return
 
 
 @app.cell
-def _(mo):
+def _(db, mo):
     _df = mo.sql(
         f"""
-        FROM 'rb_ducklake.ducklake.files/*.parquet' LIMIT 10;
+        FROM '{db}.ducklake.files/*.parquet' LIMIT 10;
         """
     )
     return
@@ -89,20 +116,20 @@ def _(mo, nl_train_stations):
 
 
 @app.cell
-def _(mo):
+def _(db, mo):
     _df = mo.sql(
         f"""
-        FROM glob('rb_ducklake.ducklake.files/*');
+        FROM glob('{db}.ducklake.files/*');
         """
     )
     return
 
 
 @app.cell
-def _(mo):
+def _(db, mo):
     _df = mo.sql(
         f"""
-        FROM 'rb_ducklake.ducklake.files/ducklake-*-delete.parquet';
+        FROM '{db}.ducklake.files/ducklake-*-delete.parquet';
         """
     )
     return
@@ -119,20 +146,23 @@ def _(mo, rb_ducklake):
 
 
 @app.cell
-def _(mo, nl_train_stations):
-    _df = mo.sql(
-        f"""
-        SELECT name_long FROM nl_train_stations AT (VERSION => 1) WHERE code = 'ASB';
-        """
-    )
+def _(mo):
+    version = mo.ui.slider(1, 30, label="Time travel")
+    version
+    return (version,)
+
+
+@app.cell
+def _(version):
+    version.value
     return
 
 
 @app.cell
-def _(mo, nl_train_stations):
+def _(mo, nl_train_stations, version):
     _df = mo.sql(
         f"""
-        SELECT name_long FROM nl_train_stations AT (VERSION => 2) WHERE code = 'ASB';
+        SELECT name_long FROM nl_train_stations AT (VERSION => {version.value}) WHERE code = 'ASB';
         """
     )
     return
@@ -156,6 +186,13 @@ def _(mo):
         SELECT version();
         """
     )
+    return
+
+
+@app.cell
+def _():
+    import marimo
+    print(marimo.__version__)
     return
 
 

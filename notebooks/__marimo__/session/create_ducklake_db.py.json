@@ -1,0 +1,285 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.13.15"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "4699a284beaae9b8dfaf715bc6f2f366",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><h2 id=\"install-ducklake\">Install ducklake</h2>\n<span class=\"paragraph\"><a href=\"https://ducklake.select/docs/stable/duckdb/introduction\" rel=\"noopener\" target=\"_blank\">https://ducklake.select/docs/stable/duckdb/introduction</a></span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "4386e8ab17336f539e292a747ff03c16",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "8ca01161d3ca39c46af20fb81bebcb62",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><h2 id=\"create-a-ducklake-database-or-attach-if-exist\">Create a ducklake database or attach if exist</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "4011d9a3e045bc2d46badf9d08c17ab6",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "375fa089ea29dbec5cc9c96e9063e767",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><h2 id=\"create-tables-and-test-ducklake-feature-in-the-rb_ducklake-duckdb-database\">Create tables and test ducklake feature in the rb_ducklake duckdb database</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "7b8f7e7b1ff2287da01a60c0bf7e4594",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "Catalog Error: Table with name \"nl_train_stations\" already exists",
+          "traceback": []
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">&quot;/Users/rbojorge/repos/duckdb/duckdb-env/lib/python3.13/site-packages/marimo/_runtime/executor.py&quot;</span>, line <span class=\"m\">138</span>, in <span class=\"n\">execute_cell</span>\n<span class=\"w\">    </span><span class=\"n\">exec</span><span class=\"p\">(</span><span class=\"n\">cell</span><span class=\"o\">.</span><span class=\"n\">body</span><span class=\"p\">,</span> <span class=\"n\">glbls</span><span class=\"p\">)</span>\n<span class=\"w\">    </span><span class=\"pm\">~~~~^^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/var/folders/yj/m_0vv38161j7hrn_rt2gxd180000gn/T/marimo_81707/__marimo__cell_Xref_.py&quot;</span>, line <span class=\"m\">1</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"n\">_df</span> <span class=\"o\">=</span> <span class=\"n\">mo</span><span class=\"o\">.</span><span class=\"n\">sql</span><span class=\"p\">(</span>\n<span class=\"w\">    </span>    <span class=\"sa\">f</span><span class=\"s2\">&quot;&quot;&quot;</span>\n<span class=\"w\">    </span><span class=\"o\">...&lt;</span><span class=\"mi\">2</span> <span class=\"n\">lines</span><span class=\"o\">&gt;...</span>\n<span class=\"w\">    </span>    <span class=\"s2\">&quot;&quot;&quot;</span>\n<span class=\"w\">    </span><span class=\"p\">)</span>\n  File <span class=\"nb\">&quot;/Users/rbojorge/repos/duckdb/duckdb-env/lib/python3.13/site-packages/marimo/_sql/sql.py&quot;</span>, line <span class=\"m\">89</span>, in <span class=\"n\">sql</span>\n<span class=\"w\">    </span><span class=\"n\">df</span> <span class=\"o\">=</span> <span class=\"n\">sql_engine</span><span class=\"o\">.</span><span class=\"n\">execute</span><span class=\"p\">(</span><span class=\"n\">query</span><span class=\"p\">)</span>\n  File <span class=\"nb\">&quot;/Users/rbojorge/repos/duckdb/duckdb-env/lib/python3.13/site-packages/marimo/_sql/engines/duckdb.py&quot;</span>, line <span class=\"m\">47</span>, in <span class=\"n\">execute</span>\n<span class=\"w\">    </span><span class=\"n\">relation</span> <span class=\"o\">=</span> <span class=\"n\">wrapped_sql</span><span class=\"p\">(</span><span class=\"n\">query</span><span class=\"p\">,</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">_connection</span><span class=\"p\">)</span>\n  File <span class=\"nb\">&quot;/Users/rbojorge/repos/duckdb/duckdb-env/lib/python3.13/site-packages/marimo/_sql/utils.py&quot;</span>, line <span class=\"m\">39</span>, in <span class=\"n\">wrapped_sql</span>\n<span class=\"w\">    </span><span class=\"n\">relation</span> <span class=\"o\">=</span> <span class=\"nb\">eval</span><span class=\"p\">(</span>\n<span class=\"w\">    </span>    <span class=\"s2\">&quot;connection.sql(query=query)&quot;</span><span class=\"p\">,</span>\n<span class=\"w\">    </span>    <span class=\"n\">ctx</span><span class=\"o\">.</span><span class=\"n\">globals</span><span class=\"p\">,</span>\n<span class=\"w\">    </span>    <span class=\"p\">{</span><span class=\"s2\">&quot;query&quot;</span><span class=\"p\">:</span> <span class=\"n\">query</span><span class=\"p\">,</span> <span class=\"s2\">&quot;connection&quot;</span><span class=\"p\">:</span> <span class=\"n\">connection</span><span class=\"p\">},</span>\n<span class=\"w\">    </span><span class=\"p\">)</span>\n  File <span class=\"nb\">&quot;&lt;string&gt;&quot;</span>, line <span class=\"m\">1</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"kn\">from</span><span class=\"w\"> </span><span class=\"nn\">multiprocessing.spawn</span><span class=\"w\"> </span><span class=\"kn\">import</span> <span class=\"n\">spawn_main</span><span class=\"p\">;</span> <span class=\"n\">spawn_main</span><span class=\"p\">(</span><span class=\"n\">tracker_fd</span><span class=\"o\">=</span><span class=\"mi\">15</span><span class=\"p\">,</span> <span class=\"n\">pipe_handle</span><span class=\"o\">=</span><span class=\"mi\">76</span><span class=\"p\">)</span>\n<span class=\"w\">    </span><span class=\"pm\">^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>\n<span class=\"gr\">duckdb.duckdb.CatalogException</span>: <span class=\"n\">Catalog Error: Table with name &quot;nl_train_stations&quot; already exists</span>\n</pre></div>\n</span>"
+        }
+      ]
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "1416b091bc845d1da41055e84b365e7b",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='SFPL-0' random-id='1d8af64f-2613-2bca-31ec-052c98ea01c1'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;file&#92;&quot;:&#92;&quot;ducklake/rb_ducklake.ducklake.files/ducklake-01973f6d-81b3-7109-a4ed-6ebe41a615c5.parquet&#92;&quot;},{&#92;&quot;file&#92;&quot;:&#92;&quot;ducklake/rb_ducklake.ducklake.files/ducklake-01973f72-621a-7d88-b003-7548ee40ac7a.parquet&#92;&quot;},{&#92;&quot;file&#92;&quot;:&#92;&quot;ducklake/rb_ducklake.ducklake.files/ducklake-01973f72-6221-718b-9f5a-d86d0f203c6f-delete.parquet&#92;&quot;}]&quot;' data-total-rows='3' data-total-columns='1' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;file&quot;, [&quot;string&quot;, &quot;str&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='false' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "5ea00a393a5dea20ab7dc050995487ff",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='BYtC-0' random-id='07129c9b-c480-5076-650c-3db8842fe706'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;id&#92;&quot;:266,&#92;&quot;code&#92;&quot;:&#92;&quot;HT&#92;&quot;,&#92;&quot;uic&#92;&quot;:8400319,&#92;&quot;name_short&#92;&quot;:&#92;&quot;Den Bosch&#92;&quot;,&#92;&quot;name_medium&#92;&quot;:&#92;&quot;&#x27;s-Hertogenbosch&#92;&quot;,&#92;&quot;name_long&#92;&quot;:&#92;&quot;&#x27;s-Hertogenbosch&#92;&quot;,&#92;&quot;slug&#92;&quot;:&#92;&quot;s-hertogenbosch&#92;&quot;,&#92;&quot;country&#92;&quot;:&#92;&quot;NL&#92;&quot;,&#92;&quot;type&#92;&quot;:&#92;&quot;knooppuntIntercitystation&#92;&quot;,&#92;&quot;geo_lat&#92;&quot;:51.69048,&#92;&quot;geo_lng&#92;&quot;:5.29362},{&#92;&quot;id&#92;&quot;:269,&#92;&quot;code&#92;&quot;:&#92;&quot;HTO&#92;&quot;,&#92;&quot;uic&#92;&quot;:8400320,&#92;&quot;name_short&#92;&quot;:&#92;&quot;Dn Bosch O&#92;&quot;,&#92;&quot;name_medium&#92;&quot;:&#92;&quot;&#x27;s-Hertogenb. O.&#92;&quot;,&#92;&quot;name_long&#92;&quot;:&#92;&quot;&#x27;s-Hertogenbosch Oost&#92;&quot;,&#92;&quot;slug&#92;&quot;:&#92;&quot;s-hertogenbosch-oost&#92;&quot;,&#92;&quot;country&#92;&quot;:&#92;&quot;NL&#92;&quot;,&#92;&quot;type&#92;&quot;:&#92;&quot;stoptreinstation&#92;&quot;,&#92;&quot;geo_lat&#92;&quot;:51.700553894043,&#92;&quot;geo_lng&#92;&quot;:5.3183331489563},{&#92;&quot;id&#92;&quot;:227,&#92;&quot;code&#92;&quot;:&#92;&quot;HDE&#92;&quot;,&#92;&quot;uic&#92;&quot;:8400388,&#92;&quot;name_short&#92;&quot;:&#92;&quot;&#x27;t Harde&#92;&quot;,&#92;&quot;name_medium&#92;&quot;:&#92;&quot;&#x27;t Harde&#92;&quot;,&#92;&quot;name_long&#92;&quot;:&#92;&quot;&#x27;t Harde&#92;&quot;,&#92;&quot;slug&#92;&quot;:&#92;&quot;t-harde&#92;&quot;,&#92;&quot;country&#92;&quot;:&#92;&quot;NL&#92;&quot;,&#92;&quot;type&#92;&quot;:&#92;&quot;stoptreinstation&#92;&quot;,&#92;&quot;geo_lat&#92;&quot;:52.4091682,&#92;&quot;geo_lng&#92;&quot;:5.893611},{&#92;&quot;id&#92;&quot;:8,&#92;&quot;code&#92;&quot;:&#92;&quot;AHBF&#92;&quot;,&#92;&quot;uic&#92;&quot;:8015345,&#92;&quot;name_short&#92;&quot;:&#92;&quot;Aachen&#92;&quot;,&#92;&quot;name_medium&#92;&quot;:&#92;&quot;Aachen Hbf&#92;&quot;,&#92;&quot;name_long&#92;&quot;:&#92;&quot;Aachen Hbf&#92;&quot;,&#92;&quot;slug&#92;&quot;:&#92;&quot;aachen-hbf&#92;&quot;,&#92;&quot;country&#92;&quot;:&#92;&quot;D&#92;&quot;,&#92;&quot;type&#92;&quot;:&#92;&quot;knooppuntIntercitystation&#92;&quot;,&#92;&quot;geo_lat&#92;&quot;:50.7678,&#92;&quot;geo_lng&#92;&quot;:6.091499},{&#92;&quot;id&#92;&quot;:818,&#92;&quot;code&#92;&quot;:&#92;&quot;AW&#92;&quot;,&#92;&quot;uic&#92;&quot;:8015199,&#92;&quot;name_short&#92;&quot;:&#92;&quot;Aachen W&#92;&quot;,&#92;&quot;name_medium&#92;&quot;:&#92;&quot;Aachen West&#92;&quot;,&#92;&quot;name_long&#92;&quot;:&#92;&quot;Aachen West&#92;&quot;,&#92;&quot;slug&#92;&quot;:&#92;&quot;aachen-west&#92;&quot;,&#92;&quot;country&#92;&quot;:&#92;&quot;D&#92;&quot;,&#92;&quot;type&#92;&quot;:&#92;&quot;stoptreinstation&#92;&quot;,&#92;&quot;geo_lat&#92;&quot;:50.78036,&#92;&quot;geo_lng&#92;&quot;:6.070715},{&#92;&quot;id&#92;&quot;:51,&#92;&quot;code&#92;&quot;:&#92;&quot;ATN&#92;&quot;,&#92;&quot;uic&#92;&quot;:8400045,&#92;&quot;name_short&#92;&quot;:&#92;&quot;Aalten&#92;&quot;,&#92;&quot;name_medium&#92;&quot;:&#92;&quot;Aalten&#92;&quot;,&#92;&quot;name_long&#92;&quot;:&#92;&quot;Aalten&#92;&quot;,&#92;&quot;slug&#92;&quot;:&#92;&quot;aalten&#92;&quot;,&#92;&quot;country&#92;&quot;:&#92;&quot;NL&#92;&quot;,&#92;&quot;type&#92;&quot;:&#92;&quot;stoptreinstation&#92;&quot;,&#92;&quot;geo_lat&#92;&quot;:51.921326524551,&#92;&quot;geo_lng&#92;&quot;:6.5786272287369},{&#92;&quot;id&#92;&quot;:5,&#92;&quot;code&#92;&quot;:&#92;&quot;AC&#92;&quot;,&#92;&quot;uic&#92;&quot;:8400047,&#92;&quot;name_short&#92;&quot;:&#92;&quot;Abcoude&#92;&quot;,&#92;&quot;name_medium&#92;&quot;:&#92;&quot;Abcoude&#92;&quot;,&#92;&quot;name_long&#92;&quot;:&#92;&quot;Abcoude&#92;&quot;,&#92;&quot;slug&#92;&quot;:&#92;&quot;abcoude&#92;&quot;,&#92;&quot;country&#92;&quot;:&#92;&quot;NL&#92;&quot;,&#92;&quot;type&#92;&quot;:&#92;&quot;stoptreinstation&#92;&quot;,&#92;&quot;geo_lat&#92;&quot;:52.2785,&#92;&quot;geo_lng&#92;&quot;:4.977},{&#92;&quot;id&#92;&quot;:550,&#92;&quot;code&#92;&quot;:&#92;&quot;EAHS&#92;&quot;,&#92;&quot;uic&#92;&quot;:8021123,&#92;&quot;name_short&#92;&quot;:&#92;&quot;Ahaus&#92;&quot;,&#92;&quot;name_medium&#92;&quot;:&#92;&quot;Ahaus&#92;&quot;,&#92;&quot;name_long&#92;&quot;:&#92;&quot;Ahaus&#92;&quot;,&#92;&quot;slug&#92;&quot;:&#92;&quot;ahaus&#92;&quot;,&#92;&quot;country&#92;&quot;:&#92;&quot;D&#92;&quot;,&#92;&quot;type&#92;&quot;:&#92;&quot;stoptreinstation&#92;&quot;,&#92;&quot;geo_lat&#92;&quot;:52.079796120944,&#92;&quot;geo_lng&#92;&quot;:7.0163583755493},{&#92;&quot;id&#92;&quot;:12,&#92;&quot;code&#92;&quot;:&#92;&quot;AIME&#92;&quot;,&#92;&quot;uic&#92;&quot;:8774176,&#92;&quot;name_short&#92;&quot;:&#92;&quot;Aime-la-Pl&#92;&quot;,&#92;&quot;name_medium&#92;&quot;:&#92;&quot;Aime-la-Plagne&#92;&quot;,&#92;&quot;name_long&#92;&quot;:&#92;&quot;Aime-la-Plagne&#92;&quot;,&#92;&quot;slug&#92;&quot;:&#92;&quot;aime-la-plagne&#92;&quot;,&#92;&quot;country&#92;&quot;:&#92;&quot;F&#92;&quot;,&#92;&quot;type&#92;&quot;:&#92;&quot;intercitystation&#92;&quot;,&#92;&quot;geo_lat&#92;&quot;:45.55438,&#92;&quot;geo_lng&#92;&quot;:6.64869},{&#92;&quot;id&#92;&quot;:819,&#92;&quot;code&#92;&quot;:&#92;&quot;ACDG&#92;&quot;,&#92;&quot;uic&#92;&quot;:8727149,&#92;&quot;name_short&#92;&quot;:&#92;&quot;Airport dG&#92;&quot;,&#92;&quot;name_medium&#92;&quot;:&#92;&quot;Airport deGaulle&#92;&quot;,&#92;&quot;name_long&#92;&quot;:&#92;&quot;Airport Charles de Gaulle&#92;&quot;,&#92;&quot;slug&#92;&quot;:&#92;&quot;airport-charles-de-gaulle&#92;&quot;,&#92;&quot;country&#92;&quot;:&#92;&quot;F&#92;&quot;,&#92;&quot;type&#92;&quot;:&#92;&quot;knooppuntIntercitystation&#92;&quot;,&#92;&quot;geo_lat&#92;&quot;:49.004048,&#92;&quot;geo_lng&#92;&quot;:2.571133}]&quot;' data-total-rows='10' data-total-columns='11' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;id&quot;, [&quot;integer&quot;, &quot;i64&quot;]], [&quot;code&quot;, [&quot;string&quot;, &quot;str&quot;]], [&quot;uic&quot;, [&quot;integer&quot;, &quot;i64&quot;]], [&quot;name_short&quot;, [&quot;string&quot;, &quot;str&quot;]], [&quot;name_medium&quot;, [&quot;string&quot;, &quot;str&quot;]], [&quot;name_long&quot;, [&quot;string&quot;, &quot;str&quot;]], [&quot;slug&quot;, [&quot;string&quot;, &quot;str&quot;]], [&quot;country&quot;, [&quot;string&quot;, &quot;str&quot;]], [&quot;type&quot;, [&quot;string&quot;, &quot;str&quot;]], [&quot;geo_lat&quot;, [&quot;number&quot;, &quot;f64&quot;]], [&quot;geo_lng&quot;, [&quot;number&quot;, &quot;f64&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='false' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "916a98413282aca3c799152ce913f4ee",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "d3a258beb0efde0c8d5e6005c409d81b",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "emfo",
+      "code_hash": "1416b091bc845d1da41055e84b365e7b",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='emfo-0' random-id='3b342216-4522-1e82-da20-7c0ccc28a05c'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;file&#92;&quot;:&#92;&quot;ducklake/rb_ducklake.ducklake.files/ducklake-01973f6d-81b3-7109-a4ed-6ebe41a615c5.parquet&#92;&quot;},{&#92;&quot;file&#92;&quot;:&#92;&quot;ducklake/rb_ducklake.ducklake.files/ducklake-01973f72-621a-7d88-b003-7548ee40ac7a.parquet&#92;&quot;},{&#92;&quot;file&#92;&quot;:&#92;&quot;ducklake/rb_ducklake.ducklake.files/ducklake-01973f72-6221-718b-9f5a-d86d0f203c6f-delete.parquet&#92;&quot;}]&quot;' data-total-rows='3' data-total-columns='1' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;file&quot;, [&quot;string&quot;, &quot;str&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='false' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hstk",
+      "code_hash": "1fb6c8fb8fda163d35e897dd9a86b552",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='Hstk-0' random-id='0abdb4a0-46a9-f1ad-feac-d814507f37c5'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;file_path&#92;&quot;:&#92;&quot;ducklake/rb_ducklake.ducklake.files/ducklake-01973f6d-81b3-7109-a4ed-6ebe41a615c5.parquet&#92;&quot;,&#92;&quot;pos&#92;&quot;:29}]&quot;' data-total-rows='1' data-total-columns='2' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;file_path&quot;, [&quot;string&quot;, &quot;str&quot;]], [&quot;pos&quot;, [&quot;integer&quot;, &quot;i64&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='false' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "nWHF",
+      "code_hash": "629e57f4aaaf3f522394af7bf5a660ae",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='nWHF-0' random-id='3ccc8e07-a70b-559e-269c-8e74fc26980a'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;snapshot_id&#92;&quot;:0,&#92;&quot;snapshot_time&#92;&quot;:&#92;&quot;2025-06-05T03:30:17.347-06:00&#92;&quot;,&#92;&quot;schema_version&#92;&quot;:0,&#92;&quot;changes&#92;&quot;:[{&#92;&quot;key&#92;&quot;:&#92;&quot;schemas_created&#92;&quot;,&#92;&quot;value&#92;&quot;:[&#92;&quot;main&#92;&quot;]}]},{&#92;&quot;snapshot_id&#92;&quot;:1,&#92;&quot;snapshot_time&#92;&quot;:&#92;&quot;2025-06-05T03:30:30.147-06:00&#92;&quot;,&#92;&quot;schema_version&#92;&quot;:1,&#92;&quot;changes&#92;&quot;:[{&#92;&quot;key&#92;&quot;:&#92;&quot;tables_created&#92;&quot;,&#92;&quot;value&#92;&quot;:[&#92;&quot;main.nl_train_stations&#92;&quot;]},{&#92;&quot;key&#92;&quot;:&#92;&quot;tables_inserted_into&#92;&quot;,&#92;&quot;value&#92;&quot;:[&#92;&quot;1&#92;&quot;]}]},{&#92;&quot;snapshot_id&#92;&quot;:2,&#92;&quot;snapshot_time&#92;&quot;:&#92;&quot;2025-06-05T03:35:50.294-06:00&#92;&quot;,&#92;&quot;schema_version&#92;&quot;:1,&#92;&quot;changes&#92;&quot;:[{&#92;&quot;key&#92;&quot;:&#92;&quot;tables_inserted_into&#92;&quot;,&#92;&quot;value&#92;&quot;:[&#92;&quot;1&#92;&quot;]},{&#92;&quot;key&#92;&quot;:&#92;&quot;tables_deleted_from&#92;&quot;,&#92;&quot;value&#92;&quot;:[&#92;&quot;1&#92;&quot;]}]},{&#92;&quot;snapshot_id&#92;&quot;:3,&#92;&quot;snapshot_time&#92;&quot;:&#92;&quot;2025-06-05T04:02:15.140-06:00&#92;&quot;,&#92;&quot;schema_version&#92;&quot;:2,&#92;&quot;changes&#92;&quot;:[{&#92;&quot;key&#92;&quot;:&#92;&quot;views_created&#92;&quot;,&#92;&quot;value&#92;&quot;:[&#92;&quot;main.&#92;&#92;&#92;&quot;duckdb_settings()&#92;&#92;&#92;&quot;&#92;&quot;]}]},{&#92;&quot;snapshot_id&#92;&quot;:4,&#92;&quot;snapshot_time&#92;&quot;:&#92;&quot;2025-06-05T04:03:03.334-06:00&#92;&quot;,&#92;&quot;schema_version&#92;&quot;:3,&#92;&quot;changes&#92;&quot;:[{&#92;&quot;key&#92;&quot;:&#92;&quot;views_created&#92;&quot;,&#92;&quot;value&#92;&quot;:[&#92;&quot;main.&#92;&#92;&#92;&quot;duckdb_settings()&#92;&#92;&#92;&quot;&#92;&quot;]},{&#92;&quot;key&#92;&quot;:&#92;&quot;views_dropped&#92;&quot;,&#92;&quot;value&#92;&quot;:[&#92;&quot;2&#92;&quot;]}]},{&#92;&quot;snapshot_id&#92;&quot;:5,&#92;&quot;snapshot_time&#92;&quot;:&#92;&quot;2025-06-05T04:03:05.622-06:00&#92;&quot;,&#92;&quot;schema_version&#92;&quot;:4,&#92;&quot;changes&#92;&quot;:[{&#92;&quot;key&#92;&quot;:&#92;&quot;views_created&#92;&quot;,&#92;&quot;value&#92;&quot;:[&#92;&quot;main.&#92;&#92;&#92;&quot;duckdb_settings()&#92;&#92;&#92;&quot;&#92;&quot;]},{&#92;&quot;key&#92;&quot;:&#92;&quot;views_dropped&#92;&quot;,&#92;&quot;value&#92;&quot;:[&#92;&quot;3&#92;&quot;]}]},{&#92;&quot;snapshot_id&#92;&quot;:6,&#92;&quot;snapshot_time&#92;&quot;:&#92;&quot;2025-06-05T04:03:22.587-06:00&#92;&quot;,&#92;&quot;schema_version&#92;&quot;:5,&#92;&quot;changes&#92;&quot;:[{&#92;&quot;key&#92;&quot;:&#92;&quot;views_created&#92;&quot;,&#92;&quot;value&#92;&quot;:[&#92;&quot;main.&#92;&#92;&#92;&quot;duckdb_settings()&#92;&#92;&#92;&quot;&#92;&quot;]},{&#92;&quot;key&#92;&quot;:&#92;&quot;views_dropped&#92;&quot;,&#92;&quot;value&#92;&quot;:[&#92;&quot;4&#92;&quot;]}]},{&#92;&quot;snapshot_id&#92;&quot;:7,&#92;&quot;snapshot_time&#92;&quot;:&#92;&quot;2025-06-05T04:03:24.456-06:00&#92;&quot;,&#92;&quot;schema_version&#92;&quot;:6,&#92;&quot;changes&#92;&quot;:[{&#92;&quot;key&#92;&quot;:&#92;&quot;views_created&#92;&quot;,&#92;&quot;value&#92;&quot;:[&#92;&quot;main.&#92;&#92;&#92;&quot;duckdb_settings()&#92;&#92;&#92;&quot;&#92;&quot;]},{&#92;&quot;key&#92;&quot;:&#92;&quot;views_dropped&#92;&quot;,&#92;&quot;value&#92;&quot;:[&#92;&quot;5&#92;&quot;]}]},{&#92;&quot;snapshot_id&#92;&quot;:8,&#92;&quot;snapshot_time&#92;&quot;:&#92;&quot;2025-06-05T04:03:25.705-06:00&#92;&quot;,&#92;&quot;schema_version&#92;&quot;:7,&#92;&quot;changes&#92;&quot;:[{&#92;&quot;key&#92;&quot;:&#92;&quot;views_created&#92;&quot;,&#92;&quot;value&#92;&quot;:[&#92;&quot;main.&#92;&#92;&#92;&quot;duckdb_settings()&#92;&#92;&#92;&quot;&#92;&quot;]},{&#92;&quot;key&#92;&quot;:&#92;&quot;views_dropped&#92;&quot;,&#92;&quot;value&#92;&quot;:[&#92;&quot;6&#92;&quot;]}]},{&#92;&quot;snapshot_id&#92;&quot;:9,&#92;&quot;snapshot_time&#92;&quot;:&#92;&quot;2025-06-05T04:03:47.098-06:00&#92;&quot;,&#92;&quot;schema_version&#92;&quot;:8,&#92;&quot;changes&#92;&quot;:[{&#92;&quot;key&#92;&quot;:&#92;&quot;views_created&#92;&quot;,&#92;&quot;value&#92;&quot;:[&#92;&quot;main.&#92;&#92;&#92;&quot;duckdb_settings()&#92;&#92;&#92;&quot;&#92;&quot;]},{&#92;&quot;key&#92;&quot;:&#92;&quot;views_dropped&#92;&quot;,&#92;&quot;value&#92;&quot;:[&#92;&quot;7&#92;&quot;]}]}]&quot;' data-total-rows='11' data-total-columns='4' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;snapshot_id&quot;, [&quot;integer&quot;, &quot;i64&quot;]], [&quot;snapshot_time&quot;, [&quot;datetime&quot;, &quot;datetime[&#92;u03bcs, America/Managua]&quot;]], [&quot;schema_version&quot;, [&quot;integer&quot;, &quot;i64&quot;]], [&quot;changes&quot;, [&quot;unknown&quot;, &quot;list[struct[2]]&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "iLit",
+      "code_hash": "6e55884b008f2eaf6e5afe6a813f96a9",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='iLit-0' random-id='7ca18a97-8d74-7d49-1afb-3845777e3f40'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;name_long&#92;&quot;:&#92;&quot;Johan Cruijff ArenA&#92;&quot;}]&quot;' data-total-rows='1' data-total-columns='1' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;name_long&quot;, [&quot;string&quot;, &quot;str&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='false' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZHCJ",
+      "code_hash": "3de8420a99f938f14481ef05838b5c5c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='ZHCJ-0' random-id='121c4cb3-f0d9-30be-c4d9-f5e2f7817dd9'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;name_long&#92;&quot;:&#92;&quot;Johan Cruijff ArenA&#92;&quot;}]&quot;' data-total-rows='1' data-total-columns='1' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;name_long&quot;, [&quot;string&quot;, &quot;str&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='false' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ROlb",
+      "code_hash": "b5ef4282e052c791284b4fe202584c82",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "qnkX",
+      "code_hash": "a0c721c0523d023205d9af01c09fc794",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "TqIu",
+      "code_hash": "459276149e0f8e348488f0bec1ddf529",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='TqIu-0' random-id='da676ab1-c8bd-9a21-59da-68e198bf1f80'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;1&#92;&quot;:1,&#92;&quot;t&#92;&quot;:2}]&quot;' data-total-rows='1' data-total-columns='2' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;1&quot;, [&quot;integer&quot;, &quot;i32&quot;]], [&quot;t&quot;, [&quot;integer&quot;, &quot;i32&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='false' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Vxnm",
+      "code_hash": "c08c50bfd81646cd4ab4c8e5c5d6e293",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "XtKs",
+      "code_hash": "de26088e74bbbcf52fe6bf4d82b9c1e6",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='XtKs-0' random-id='3e9675a0-33d2-8d6f-3f7d-3e141aa5a159'><marimo-slider data-initial-value='1' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Time travel&lt;/span&gt;&lt;/span&gt;&quot;' data-start='1' data-stop='30' data-steps='[]' data-debounce='false' data-disabled='false' data-orientation='&quot;horizontal&quot;' data-show-value='false' data-include-input='false' data-full-width='false'></marimo-slider></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "rTJW",
+      "code_hash": "7e686f6048beec151d5a324223d08553",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre style='font-size: 12px'>2</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bfzv",
+      "code_hash": "77f1a339fe2c7e13287c5e85b7ec7c45",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre style='font-size: 12px'>&#x27;ducklake/rb_ducklake&#x27;</pre>"
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}
